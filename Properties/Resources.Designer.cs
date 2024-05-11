@@ -63,18 +63,18 @@ namespace HM_Loc_Converter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream HMLCconvert {
+        internal static System.IO.UnmanagedMemoryStream sndConvert {
             get {
-                return ResourceManager.GetStream("HMLCconvert", resourceCulture);
+                return ResourceManager.GetStream("sndConvert", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream HMLClogin {
+        internal static System.IO.UnmanagedMemoryStream sndLogin {
             get {
-                return ResourceManager.GetStream("HMLClogin", resourceCulture);
+                return ResourceManager.GetStream("sndLogin", resourceCulture);
             }
         }
         

@@ -154,7 +154,8 @@ so much, I can't wait to learn and keep building bigger and better stuff. Until 
     <value>True</value>
   </metadata>
   <data name="txtStart1.Text" xml:space="preserve">
-    <value>* What this does is allow you, the user to paste all your locs at once as long as one per line to Loc box.
+    <value>
+* What this does is allow you, the user to paste all your locs at once as long as one per line to Loc box.
 
 * Add your script Prefix [ex:richter.t1cracker] to Prefix box.
 
