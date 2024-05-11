@@ -55,6 +55,7 @@
             // btnConvert
             // 
             btnConvert.BackColor = SystemColors.GrayText;
+            btnConvert.Cursor = Cursors.Default;
             btnConvert.FlatStyle = FlatStyle.System;
             btnConvert.Font = new Font("White Rabbit", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConvert.ForeColor = SystemColors.ActiveCaptionText;

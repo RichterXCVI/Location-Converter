@@ -72,15 +72,6 @@ namespace HM_Loc_Converter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream HMLCexit {
-            get {
-                return ResourceManager.GetStream("HMLCexit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream HMLClogin {
             get {
                 return ResourceManager.GetStream("HMLClogin", resourceCulture);

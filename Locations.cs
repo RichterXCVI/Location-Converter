@@ -30,6 +30,22 @@ namespace HM_Loc_Converter
             // Preload the sound file
             soundPlayer = new SoundPlayer(); // Initialize the sound player
             PreloadSound();
+
+            // Subscribe to events
+            txtInput.TextChanged += TxtInput_TextChanged;
+            txtScript.TextChanged += TxtScript_TextChanged;
+        }
+
+        private void TxtInput_TextChanged(object? sender, EventArgs e)
+        {
+            // Enable the convert button when there's new input
+            btnConvert.Enabled = true;
+        }
+
+        private void TxtScript_TextChanged(object? sender, EventArgs e)
+        {
+            // Enable the convert button when there's new input in the script textbox
+            btnConvert.Enabled = true;
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -68,6 +84,9 @@ namespace HM_Loc_Converter
 
             // Play the preloaded sound
             soundPlayer.Play();
+
+            // Disable the convert button after conversion
+            btnConvert.Enabled = false;
         }
 
         private void LoadCustomFont()
