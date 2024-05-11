@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <None Remove="Resources\HMLCconvert.wav" />
-    <None Remove="Resources\HMLCexit.wav" />
     <None Remove="Resources\HMLClogin.wav" />
     <None Remove="Resources\whitrabt.ttf" />
   </ItemGroup>
@@ -29,9 +28,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\HMLCconvert.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\HMLCexit.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\HMLClogin.wav">
