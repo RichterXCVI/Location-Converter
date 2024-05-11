@@ -1,4 +1,4 @@
-# HackMud locConverter
+Location Converter
 
                                    "Welcome to my Loc Converter! 
 
