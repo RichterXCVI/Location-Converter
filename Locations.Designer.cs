@@ -43,7 +43,7 @@
             // 
             txtResults.BackColor = SystemColors.ActiveCaption;
             txtResults.BorderStyle = BorderStyle.FixedSingle;
-            txtResults.Cursor = Cursors.No;
+            txtResults.Cursor = Cursors.IBeam;
             txtResults.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtResults.Location = new Point(377, 201);
             txtResults.Name = "txtResults";
