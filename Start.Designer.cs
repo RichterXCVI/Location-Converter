@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             txtStart = new TextBox();
             txtPress = new TextBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // txtStart
@@ -41,13 +43,13 @@
             txtStart.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtStart.ForeColor = Color.Lime;
             txtStart.Location = new Point(12, 12);
-            txtStart.MaximumSize = new Size(763, 211);
-            txtStart.MinimumSize = new Size(763, 211);
+            txtStart.MaximumSize = new Size(747, 69);
+            txtStart.MinimumSize = new Size(747, 69);
             txtStart.Multiline = true;
             txtStart.Name = "txtStart";
             txtStart.ReadOnly = true;
             txtStart.RightToLeft = RightToLeft.No;
-            txtStart.Size = new Size(763, 211);
+            txtStart.Size = new Size(747, 69);
             txtStart.TabIndex = 0;
             txtStart.Text = resources.GetString("txtStart.Text");
             // 
@@ -67,12 +69,50 @@
             txtPress.TabIndex = 1;
             txtPress.Text = "PRESS ENTER TO CONTINUE";
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = SystemColors.Desktop;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Cursor = Cursors.No;
+            textBox1.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = Color.Lime;
+            textBox1.Location = new Point(12, 170);
+            textBox1.MaximumSize = new Size(747, 57);
+            textBox1.MinimumSize = new Size(747, 57);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.RightToLeft = RightToLeft.No;
+            textBox1.Size = new Size(747, 57);
+            textBox1.TabIndex = 2;
+            textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.Desktop;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Cursor = Cursors.No;
+            textBox2.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.ForeColor = Color.Cyan;
+            textBox2.Location = new Point(12, 85);
+            textBox2.MaximumSize = new Size(747, 69);
+            textBox2.MinimumSize = new Size(747, 69);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.RightToLeft = RightToLeft.No;
+            textBox2.Size = new Size(747, 69);
+            textBox2.TabIndex = 3;
+            textBox2.Text = resources.GetString("textBox2.Text");
+            // 
             // Start
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(771, 284);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(txtPress);
             Controls.Add(txtStart);
             Cursor = Cursors.No;
@@ -90,5 +130,7 @@
 
         private TextBox txtStart;
         private TextBox txtPress;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

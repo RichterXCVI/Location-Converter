@@ -58,7 +58,7 @@
             btnConvert.FlatStyle = FlatStyle.System;
             btnConvert.Font = new Font("White Rabbit", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConvert.ForeColor = SystemColors.ActiveCaptionText;
-            btnConvert.Location = new Point(79, 564);
+            btnConvert.Location = new Point(84, 557);
             btnConvert.Name = "btnConvert";
             btnConvert.Size = new Size(163, 48);
             btnConvert.TabIndex = 2;
@@ -127,7 +127,7 @@
             label2.AutoSize = true;
             label2.BackColor = SystemColors.InfoText;
             label2.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Fuchsia;
+            label2.ForeColor = Color.Yellow;
             label2.Location = new Point(748, 611);
             label2.Name = "label2";
             label2.Size = new Size(110, 9);

@@ -128,15 +128,19 @@ with C#. I decided to build this app not only to help strengthen my coding skill
 copy/pasting hundred's of locations to a notepad and then copy/pasta those same locs one by one into my 
 cracker during a hack...
 
-* What this does is allow you, the user to paste all your locs at once as long as one per line to Loc box.
 
-* Add your script Prefix [ex:richter.t1cracker] to Prefix box.
 
-* Click convert and watch the magic happen of adding all your locs to the rest of your script!!
 
-* Result: richter.t1cracker {t:#s.uknown_jr_vhslsk.pub_a8rmp9}
-
-Both the loc and results box will auto-scroll if you add enough locations, so don't worry about running 
+</value>
+  </data>
+  <metadata name="txtPress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="textBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Both the loc and results box will auto-scroll if you add enough locations, so don't worry about running 
 out of room. I hope you enjoy and find this app useful, it was super simple to make and I love this game 
 so much, I can't wait to learn and keep building bigger and better stuff. Until next time folks... 
 
@@ -146,7 +150,19 @@ so much, I can't wait to learn and keep building bigger and better stuff. Until 
 
 </value>
   </data>
-  <metadata name="txtPress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="textBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>* What this does is allow you, the user to paste all your locs at once as long as one per line to Loc box.
+
+* Add your script Prefix [ex:richter.t1cracker] to Prefix box.
+
+* Click convert and watch the magic happen of adding all your locs to the rest of your script!!
+
+* Result: richter.t1cracker {t:#s.uknown_jr_vhslsk.pub_a8rmp9}
+
+
+</value>
+  </data>
 </root>
