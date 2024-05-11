@@ -61,15 +61,71 @@ namespace HM_Loc_Converter
             }
         }
 
-
         private void LoadCustomFont()
         {
-            // Your existing code to load the custom font
+            // Read the font data from embedded resource
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            Stream? stream = assembly.GetManifestResourceStream("HM_Loc_Converter.WhiteRabbit.ttf");
+            if (stream != null)
+            {
+                using (stream)
+                {
+                    // Create a PrivateFontCollection
+                    PrivateFontCollection privateFonts = new PrivateFontCollection();
+
+                    // Load the font from the stream
+                    byte[] buffer = new byte[stream.Length];
+                    stream.Read(buffer, 0, buffer.Length);
+                    IntPtr fontPtr = Marshal.AllocCoTaskMem(buffer.Length);
+                    Marshal.Copy(buffer, 0, fontPtr, buffer.Length);
+                    privateFonts.AddMemoryFont(fontPtr, buffer.Length);
+
+                    // Check if the font was loaded successfully
+                    if (privateFonts.Families.Length > 0)
+                    {
+                        // Create a Font object
+                        customFont = new Font(privateFonts.Families[0], 12f); // Adjust the size as needed
+
+                        // Free the memory
+                        Marshal.FreeCoTaskMem(fontPtr);
+                    }
+                    else
+                    {
+                        // Log an error or display a message if the font was not loaded
+                        Console.WriteLine("Failed to load the font.");
+                    }
+                }
+            }
+            else
+            {
+                // Handle the case when the resource stream is null (e.g., log a warning)
+                Console.WriteLine("Failed to load the font resource.");
+            }
         }
 
         private void SetControlFonts()
         {
-            // Your existing code to set the font for controls
+            // Set the font for controls if customFont is not null
+            if (customFont != null)
+            {
+                // Set the font for labels and textboxes
+                foreach (Control control in Controls)
+                {
+                    if (control is Label lbl)
+                    {
+                        lbl.Font = customFont!;
+                    }
+                    else if (control is TextBox txt)
+                    {
+                        txt.Font = customFont!;
+                    }
+                }
+            }
+            else
+            {
+                // Handle the case when customFont is null (e.g., log a warning)
+                Console.WriteLine("Custom font is null.");
+            }
         }
     }
 }

@@ -34,9 +34,9 @@
             lblInput = new Label();
             lblResults = new Label();
             txtScript = new TextBox();
-            label1 = new Label();
+            lblPrefix = new Label();
             txtInput = new TextBox();
-            label2 = new Label();
+            lblRichter = new Label();
             SuspendLayout();
             // 
             // txtResults
@@ -99,16 +99,16 @@
             txtScript.Size = new Size(398, 23);
             txtScript.TabIndex = 5;
             // 
-            // label1
+            // lblPrefix
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("White Rabbit", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(551, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(150, 15);
-            label1.TabIndex = 6;
-            label1.Text = "Script Prefix";
+            lblPrefix.AutoSize = true;
+            lblPrefix.Font = new Font("White Rabbit", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPrefix.ForeColor = Color.Fuchsia;
+            lblPrefix.Location = new Point(551, 36);
+            lblPrefix.Name = "lblPrefix";
+            lblPrefix.Size = new Size(150, 15);
+            lblPrefix.TabIndex = 6;
+            lblPrefix.Text = "Script Prefix";
             // 
             // txtInput
             // 
@@ -122,18 +122,18 @@
             txtInput.Size = new Size(319, 504);
             txtInput.TabIndex = 7;
             // 
-            // label2
+            // lblRichter
             // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.InfoText;
-            label2.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Yellow;
-            label2.Location = new Point(748, 611);
-            label2.Name = "label2";
-            label2.Size = new Size(110, 9);
-            label2.TabIndex = 8;
-            label2.Text = "By: richterXCVI";
-            label2.TextAlign = ContentAlignment.TopCenter;
+            lblRichter.AutoSize = true;
+            lblRichter.BackColor = SystemColors.InfoText;
+            lblRichter.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRichter.ForeColor = Color.Yellow;
+            lblRichter.Location = new Point(748, 611);
+            lblRichter.Name = "lblRichter";
+            lblRichter.Size = new Size(110, 9);
+            lblRichter.TabIndex = 8;
+            lblRichter.Text = "By: richterXCVI";
+            lblRichter.TextAlign = ContentAlignment.TopCenter;
             // 
             // Locations
             // 
@@ -143,9 +143,9 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(891, 635);
-            Controls.Add(label2);
+            Controls.Add(lblRichter);
             Controls.Add(txtInput);
-            Controls.Add(label1);
+            Controls.Add(lblPrefix);
             Controls.Add(txtScript);
             Controls.Add(lblResults);
             Controls.Add(lblInput);
@@ -170,8 +170,8 @@
         private Label lblInput;
         private Label lblResults;
         private TextBox txtScript;
-        private Label label1;
+        private Label lblPrefix;
         private TextBox txtInput;
-        private Label label2;
+        private Label lblRichter;
     }
 }

@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             txtStart = new TextBox();
             txtPress = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtStart3 = new TextBox();
+            txtStart1 = new TextBox();
+            textBox3 = new TextBox();
             SuspendLayout();
             // 
             // txtStart
@@ -60,7 +61,7 @@
             txtPress.Cursor = Cursors.No;
             txtPress.Font = new Font("White Rabbit", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPress.ForeColor = Color.Red;
-            txtPress.Location = new Point(220, 247);
+            txtPress.Location = new Point(229, 246);
             txtPress.MaximumSize = new Size(280, 16);
             txtPress.MinimumSize = new Size(280, 16);
             txtPress.Name = "txtPress";
@@ -69,41 +70,55 @@
             txtPress.TabIndex = 1;
             txtPress.Text = "PRESS ENTER TO CONTINUE";
             // 
-            // textBox1
+            // txtStart3
             // 
-            textBox1.BackColor = SystemColors.Desktop;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Cursor = Cursors.No;
-            textBox1.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.Lime;
-            textBox1.Location = new Point(12, 170);
-            textBox1.MaximumSize = new Size(747, 57);
-            textBox1.MinimumSize = new Size(747, 57);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.RightToLeft = RightToLeft.No;
-            textBox1.Size = new Size(747, 57);
-            textBox1.TabIndex = 2;
-            textBox1.Text = resources.GetString("textBox1.Text");
+            txtStart3.BackColor = SystemColors.Desktop;
+            txtStart3.BorderStyle = BorderStyle.None;
+            txtStart3.Cursor = Cursors.No;
+            txtStart3.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtStart3.ForeColor = Color.Lime;
+            txtStart3.Location = new Point(12, 170);
+            txtStart3.MaximumSize = new Size(747, 57);
+            txtStart3.MinimumSize = new Size(747, 57);
+            txtStart3.Multiline = true;
+            txtStart3.Name = "txtStart3";
+            txtStart3.ReadOnly = true;
+            txtStart3.RightToLeft = RightToLeft.No;
+            txtStart3.Size = new Size(747, 57);
+            txtStart3.TabIndex = 2;
+            txtStart3.Text = resources.GetString("txtStart3.Text");
             // 
-            // textBox2
+            // txtStart1
             // 
-            textBox2.BackColor = SystemColors.Desktop;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Cursor = Cursors.No;
-            textBox2.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.Cyan;
-            textBox2.Location = new Point(12, 85);
-            textBox2.MaximumSize = new Size(747, 69);
-            textBox2.MinimumSize = new Size(747, 69);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.RightToLeft = RightToLeft.No;
-            textBox2.Size = new Size(747, 69);
-            textBox2.TabIndex = 3;
-            textBox2.Text = resources.GetString("textBox2.Text");
+            txtStart1.BackColor = SystemColors.Desktop;
+            txtStart1.BorderStyle = BorderStyle.None;
+            txtStart1.Cursor = Cursors.No;
+            txtStart1.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtStart1.ForeColor = Color.Cyan;
+            txtStart1.Location = new Point(12, 85);
+            txtStart1.MaximumSize = new Size(747, 69);
+            txtStart1.MinimumSize = new Size(747, 69);
+            txtStart1.Multiline = true;
+            txtStart1.Name = "txtStart1";
+            txtStart1.ReadOnly = true;
+            txtStart1.RightToLeft = RightToLeft.No;
+            txtStart1.Size = new Size(747, 69);
+            txtStart1.TabIndex = 3;
+            txtStart1.Text = resources.GetString("txtStart1.Text");
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = SystemColors.Desktop;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Cursor = Cursors.No;
+            textBox3.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.ForeColor = Color.Yellow;
+            textBox3.Location = new Point(68, 32);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(78, 10);
+            textBox3.TabIndex = 4;
+            textBox3.Text = "richterXCVI";
             // 
             // Start
             // 
@@ -111,8 +126,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(771, 284);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBox3);
+            Controls.Add(txtStart1);
+            Controls.Add(txtStart3);
             Controls.Add(txtPress);
             Controls.Add(txtStart);
             Cursor = Cursors.No;
@@ -130,7 +146,8 @@
 
         private TextBox txtStart;
         private TextBox txtPress;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtStart3;
+        private TextBox txtStart1;
+        private TextBox textBox3;
     }
 }
