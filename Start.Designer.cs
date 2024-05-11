@@ -95,14 +95,12 @@
             txtStart1.Cursor = Cursors.No;
             txtStart1.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtStart1.ForeColor = Color.Cyan;
-            txtStart1.Location = new Point(12, 85);
-            txtStart1.MaximumSize = new Size(747, 69);
-            txtStart1.MinimumSize = new Size(747, 69);
+            txtStart1.Location = new Point(8, 75);
             txtStart1.Multiline = true;
             txtStart1.Name = "txtStart1";
             txtStart1.ReadOnly = true;
             txtStart1.RightToLeft = RightToLeft.No;
-            txtStart1.Size = new Size(747, 69);
+            txtStart1.Size = new Size(747, 89);
             txtStart1.TabIndex = 3;
             txtStart1.Text = resources.GetString("txtStart1.Text");
             // 

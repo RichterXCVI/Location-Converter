@@ -1,165 +1,91 @@
-using System;
-using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Media;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
 namespace HM_Loc_Converter
 {
     public partial class Locations : Form
     {
-        private Font? customFont; // Make the customFont field nullable
-        private SoundPlayer soundPlayer; // Remove the nullable annotation
+        private Font? customFont;
+        private SoundPlayer? soundPlayer; // Declare soundPlayer as nullable
 
         public Locations()
         {
             InitializeComponent();
-
-            // Center the form on the screen
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            // Load the embedded font
             LoadCustomFont();
-
-            // Set the font for controls
             SetControlFonts();
-
-            // Preload the sound file
-            soundPlayer = new SoundPlayer(); // Initialize the sound player
-            PreloadSound();
-
-            // Subscribe to events
-            txtInput.TextChanged += TxtInput_TextChanged;
-            txtScript.TextChanged += TxtScript_TextChanged;
+            PreloadSound(); // Load the sound file
+            txtInput.TextChanged += Txt_TextChanged;
+            txtScript.TextChanged += Txt_TextChanged;
+            txtInput.Click += (s, e) => txtResults.BackColor = SystemColors.ActiveCaption;
+            txtResults.Click += (s, e) => txtResults.BackColor = string.IsNullOrEmpty(txtScript.Text.Trim()) ? Color.Red : SystemColors.Window;
         }
 
-        private void TxtInput_TextChanged(object? sender, EventArgs e)
-        {
-            // Enable the convert button when there's new input
-            btnConvert.Enabled = true;
-        }
-
-        private void TxtScript_TextChanged(object? sender, EventArgs e)
-        {
-            // Enable the convert button when there's new input in the script textbox
-            btnConvert.Enabled = true;
-        }
+        private void Txt_TextChanged(object? sender, EventArgs e) => btnConvert.Enabled = !string.IsNullOrEmpty(txtScript.Text.Trim());
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
-            // Clear previous results
             txtResults.Clear();
-
-            // Split the input text into lines
             string[] locations = txtInput.Text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-
-            // Get the custom prefix from the txtScript textbox
             string customPrefix = txtScript.Text.Trim();
-
-            // Check if the script prefix is empty
             if (string.IsNullOrEmpty(customPrefix))
             {
-                // Highlight the txtScript textbox in red
                 txtScript.BackColor = Color.Red;
-                return; // Exit the method to prevent further processing
+                return;
             }
             else
             {
-                // Reset the background color of the txtScript textbox
-                txtScript.BackColor = SystemColors.Window;
+                txtScript.BackColor = SystemColors.ActiveCaption;
             }
-
-            // Iterate through each location and append the converted string to results
             foreach (string location in locations)
             {
-                // Replace "player.loc" with the current location
-                string convertedLocation = customPrefix + "{t:#s." + location + "}";
-
-                // Append the converted location to the results textbox with a newline
-                txtResults.AppendText(convertedLocation + Environment.NewLine);
+                txtResults.AppendText(customPrefix + "{t:#s." + location + "}" + Environment.NewLine);
             }
-
-            // Play the preloaded sound
-            soundPlayer.Play();
-
-            // Disable the convert button after conversion
+            soundPlayer?.Play(); // Play the sound if soundPlayer is not null
             btnConvert.Enabled = false;
         }
 
         private void LoadCustomFont()
         {
-            // Read the font data from embedded resource
             Assembly assembly = Assembly.GetExecutingAssembly();
-            Stream? stream = assembly.GetManifestResourceStream("HM_Loc_Converter.WhiteRabbit.ttf");
+            using Stream? stream = assembly.GetManifestResourceStream("HM_Loc_Converter.WhiteRabbit.ttf");
             if (stream != null)
             {
-                using (stream)
+                PrivateFontCollection privateFonts = new PrivateFontCollection();
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                IntPtr fontPtr = Marshal.AllocCoTaskMem(buffer.Length);
+                Marshal.Copy(buffer, 0, fontPtr, buffer.Length);
+                privateFonts.AddMemoryFont(fontPtr, buffer.Length);
+                if (privateFonts.Families.Length > 0)
                 {
-                    // Create a PrivateFontCollection
-                    PrivateFontCollection privateFonts = new PrivateFontCollection();
-
-                    // Load the font from the stream
-                    byte[] buffer = new byte[stream.Length];
-                    stream.Read(buffer, 0, buffer.Length);
-                    IntPtr fontPtr = Marshal.AllocCoTaskMem(buffer.Length);
-                    Marshal.Copy(buffer, 0, fontPtr, buffer.Length);
-                    privateFonts.AddMemoryFont(fontPtr, buffer.Length);
-
-                    // Check if the font was loaded successfully
-                    if (privateFonts.Families.Length > 0)
-                    {
-                        // Create a Font object
-                        customFont = new Font(privateFonts.Families[0], 12f); // Adjust the size as needed
-
-                        // Free the memory
-                        Marshal.FreeCoTaskMem(fontPtr);
-                    }
-                    else
-                    {
-                        // Log an error or display a message if the font was not loaded
-                        Console.WriteLine("Failed to load the font.");
-                    }
+                    customFont = new Font(privateFonts.Families[0], 12f);
+                    Marshal.FreeCoTaskMem(fontPtr);
                 }
-            }
-            else
-            {
-                // Handle the case when the resource stream is null (e.g., log a warning)
-                Console.WriteLine("Failed to load the font resource.");
             }
         }
 
         private void SetControlFonts()
         {
-            // Set the font for controls if customFont is not null
             if (customFont != null)
             {
-                // Set the font for labels and textboxes
                 foreach (Control control in Controls)
                 {
                     if (control is Label lbl)
                     {
-                        lbl.Font = customFont!;
+                        lbl.Font = customFont;
                     }
                     else if (control is TextBox txt)
                     {
-                        txt.Font = customFont!;
+                        txt.Font = customFont;
                     }
                 }
             }
-            else
-            {
-                // Handle the case when customFont is null (e.g., log a warning)
-                Console.WriteLine("Custom font is null.");
-            }
         }
 
-        private void PreloadSound()
-        {
-            // Load and initialize the sound player
-            soundPlayer = new SoundPlayer(Properties.Resources.HMLCconvert);
-        }
+        private void PreloadSound() => soundPlayer = new SoundPlayer(Properties.Resources.sndConvert);
     }
 }
