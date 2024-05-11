@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
+using System.Media;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -11,6 +12,7 @@ namespace HM_Loc_Converter
     public partial class Start : Form
     {
         private Font? customFont; // Make the customFont field nullable
+        private SoundPlayer soundPlayer;
 
         public Start()
         {
@@ -25,6 +27,10 @@ namespace HM_Loc_Converter
             // Set the font for controls
             SetControlFonts();
 
+            // Preload the sound file
+            soundPlayer = new SoundPlayer(); // Initialize the sound player
+            PreloadSound();
+
             // Subscribe to the KeyDown event
             this.KeyPreview = true; // Allow form to receive key events even if not focused
             this.KeyDown += Start_KeyDown;
@@ -38,6 +44,9 @@ namespace HM_Loc_Converter
             // Check if the Enter key is pressed
             if (e.KeyCode == Keys.Enter)
             {
+                // Play the preloaded sound
+                soundPlayer.Play();
+
                 // Close only the Start form
                 this.Hide();
 
@@ -113,6 +122,13 @@ namespace HM_Loc_Converter
                 // Handle the case when customFont is null (e.g., log a warning)
                 Console.WriteLine("Custom font is null.");
             }
+        }
+
+        private void PreloadSound()
+        {
+            // Load and initialize the sound player
+            soundPlayer = new SoundPlayer(Properties.Resources.HMLClogin);
+            soundPlayer.Load();
         }
     }
 }

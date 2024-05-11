@@ -74,9 +74,9 @@
             lblInput.ForeColor = Color.Fuchsia;
             lblInput.Location = new Point(101, 26);
             lblInput.Name = "lblInput";
-            lblInput.Size = new Size(117, 15);
+            lblInput.Size = new Size(128, 15);
             lblInput.TabIndex = 3;
-            lblInput.Text = "Paste Locs";
+            lblInput.Text = "Paste Locs:";
             lblInput.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblResults
@@ -86,9 +86,9 @@
             lblResults.ForeColor = Color.Fuchsia;
             lblResults.Location = new Point(575, 166);
             lblResults.Name = "lblResults";
-            lblResults.Size = new Size(84, 15);
+            lblResults.Size = new Size(95, 15);
             lblResults.TabIndex = 4;
-            lblResults.Text = "Results";
+            lblResults.Text = "Results:";
             // 
             // txtScript
             // 
@@ -106,9 +106,9 @@
             lblPrefix.ForeColor = Color.Fuchsia;
             lblPrefix.Location = new Point(551, 36);
             lblPrefix.Name = "lblPrefix";
-            lblPrefix.Size = new Size(150, 15);
+            lblPrefix.Size = new Size(161, 15);
             lblPrefix.TabIndex = 6;
-            lblPrefix.Text = "Script Prefix";
+            lblPrefix.Text = "Script Prefix:";
             // 
             // txtInput
             // 
@@ -159,7 +159,7 @@
             MaximumSize = new Size(907, 674);
             MinimumSize = new Size(907, 674);
             Name = "Locations";
-            Text = "HM-Loc Converter";
+            Text = "HM_Loc_Converter";
             ResumeLayout(false);
             PerformLayout();
         }

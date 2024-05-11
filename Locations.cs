@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
+using System.Media;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -11,10 +12,14 @@ namespace HM_Loc_Converter
     public partial class Locations : Form
     {
         private Font? customFont; // Make the customFont field nullable
+        private SoundPlayer soundPlayer; // Remove the nullable annotation
 
         public Locations()
         {
             InitializeComponent();
+
+            // Center the form on the screen
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             // Load the embedded font
             LoadCustomFont();
@@ -22,8 +27,9 @@ namespace HM_Loc_Converter
             // Set the font for controls
             SetControlFonts();
 
-            // Center the form on the screen
-            this.StartPosition = FormStartPosition.CenterScreen;
+            // Preload the sound file
+            soundPlayer = new SoundPlayer(); // Initialize the sound player
+            PreloadSound();
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -59,6 +65,9 @@ namespace HM_Loc_Converter
                 // Append the converted location to the results textbox with a newline
                 txtResults.AppendText(convertedLocation + Environment.NewLine);
             }
+
+            // Play the preloaded sound
+            soundPlayer.Play();
         }
 
         private void LoadCustomFont()
@@ -126,6 +135,12 @@ namespace HM_Loc_Converter
                 // Handle the case when customFont is null (e.g., log a warning)
                 Console.WriteLine("Custom font is null.");
             }
+        }
+
+        private void PreloadSound()
+        {
+            // Load and initialize the sound player
+            soundPlayer = new SoundPlayer(Properties.Resources.HMLCconvert);
         }
     }
 }
