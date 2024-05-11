@@ -21,8 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="locs.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Properties\whitrabt.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
@@ -38,6 +42,7 @@
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 

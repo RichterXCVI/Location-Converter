@@ -36,6 +36,7 @@
             txtScript = new TextBox();
             label1 = new Label();
             txtInput = new TextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // txtResults
@@ -55,11 +56,11 @@
             // 
             btnConvert.BackColor = SystemColors.GrayText;
             btnConvert.FlatStyle = FlatStyle.System;
-            btnConvert.Font = new Font("White Rabbit", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConvert.Font = new Font("White Rabbit", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConvert.ForeColor = SystemColors.ActiveCaptionText;
-            btnConvert.Location = new Point(87, 566);
+            btnConvert.Location = new Point(79, 564);
             btnConvert.Name = "btnConvert";
-            btnConvert.Size = new Size(125, 48);
+            btnConvert.Size = new Size(163, 48);
             btnConvert.TabIndex = 2;
             btnConvert.Text = "Convert";
             btnConvert.UseVisualStyleBackColor = false;
@@ -76,6 +77,7 @@
             lblInput.Size = new Size(117, 15);
             lblInput.TabIndex = 3;
             lblInput.Text = "Paste Locs";
+            lblInput.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblResults
             // 
@@ -93,7 +95,7 @@
             txtScript.BackColor = SystemColors.InactiveCaption;
             txtScript.Location = new Point(427, 65);
             txtScript.Name = "txtScript";
-            txtScript.PlaceholderText = "Enter script here [ex:\"k1mpp4.breaker]";
+            txtScript.PlaceholderText = "Enter script here [ex:\"richter.t1cracker\"]";
             txtScript.Size = new Size(398, 23);
             txtScript.TabIndex = 5;
             // 
@@ -120,6 +122,19 @@
             txtInput.Size = new Size(319, 504);
             txtInput.TabIndex = 7;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.InfoText;
+            label2.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Fuchsia;
+            label2.Location = new Point(748, 611);
+            label2.Name = "label2";
+            label2.Size = new Size(110, 9);
+            label2.TabIndex = 8;
+            label2.Text = "By: richterXCVI";
+            label2.TextAlign = ContentAlignment.TopCenter;
+            // 
             // Locations
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -128,6 +143,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(891, 635);
+            Controls.Add(label2);
             Controls.Add(txtInput);
             Controls.Add(label1);
             Controls.Add(txtScript);
@@ -135,6 +151,7 @@
             Controls.Add(lblInput);
             Controls.Add(btnConvert);
             Controls.Add(txtResults);
+            Cursor = Cursors.No;
             ForeColor = SystemColors.ButtonFace;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -155,5 +172,6 @@
         private TextBox txtScript;
         private Label label1;
         private TextBox txtInput;
+        private Label label2;
     }
 }
