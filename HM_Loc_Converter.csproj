@@ -13,10 +13,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Properties\whitrabt.ttf" />
     <None Remove="Resources\HMLCconvert.wav" />
     <None Remove="Resources\HMLCexit.wav" />
     <None Remove="Resources\HMLClogin.wav" />
+    <None Remove="Resources\whitrabt.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,9 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Properties\whitrabt.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\HMLCconvert.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -38,6 +35,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\HMLClogin.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\whitrabt.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

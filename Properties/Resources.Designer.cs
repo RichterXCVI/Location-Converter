@@ -86,5 +86,15 @@ namespace HM_Loc_Converter.Properties {
                 return ResourceManager.GetStream("HMLClogin", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] whitrabt {
+            get {
+                object obj = ResourceManager.GetObject("whitrabt", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
