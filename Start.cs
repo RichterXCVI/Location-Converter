@@ -31,6 +31,8 @@ namespace HM_Loc_Converter
                 }
             };
             Activate();
+            // Set focus to the form itself when it loads
+            this.Load += (s, e) => this.Focus();
         }
 
         private async Task FadeOutAndOpenLocations()

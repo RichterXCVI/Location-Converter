@@ -56,6 +56,7 @@
             // btnConvert
             // 
             btnConvert.BackColor = SystemColors.ButtonHighlight;
+            btnConvert.Cursor = Cursors.Default;
             btnConvert.FlatStyle = FlatStyle.Popup;
             btnConvert.Font = new Font("White Rabbit", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConvert.ForeColor = SystemColors.ActiveCaptionText;
@@ -116,7 +117,7 @@
             // txtInput
             // 
             txtInput.BackColor = SystemColors.ActiveCaption;
-            txtInput.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInput.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInput.Location = new Point(501, 220);
             txtInput.Margin = new Padding(50, 50, 0, 0);
             txtInput.Multiline = true;
