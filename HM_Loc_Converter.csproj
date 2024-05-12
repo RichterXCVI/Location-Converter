@@ -14,6 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="HMLCapp.png" />
     <None Remove="Resources\sndConvert.wav" />
     <None Remove="Resources\sndLogin.wav" />
     <None Remove="Resources\whitrabt.ttf" />
@@ -24,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="HMLCapp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\sndConvert.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
