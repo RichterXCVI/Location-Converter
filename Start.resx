@@ -123,11 +123,10 @@
   <data name="txtStart.Text" xml:space="preserve">
     <value>                                   "Welcome to my Loc Converter! 
 
-Hi, I'm richterXCVI and I built this as I'm a noob to Hackmud and Javascript as a bit more familar 
-with C#. I decided to build this app not only to help strengthen my coding skills but also, I was tired of 
-copy/pasting hundred's of locations to a notepad and then copy/pasta those same locs one by one into my 
+Hi, I’m richterXCVI, and I created this tool because I’m new to Hackmud and JavaScript. While I’m more 
+familiar with C#, I decided to build this app to improve my coding skills. Plus, I was tired of manually 
+copying and pasting hundreds of locations into a notepad and then transferring them one by one to my 
 cracker during a hack...
-
 
 
 
@@ -140,12 +139,11 @@ cracker during a hack...
     <value>True</value>
   </metadata>
   <data name="txtStart3.Text" xml:space="preserve">
-    <value>Both the loc and results box will auto-scroll if you add enough locations, so don't worry about running 
-out of room. I hope you enjoy and find this app useful, it was super simple to make and I love this game 
-so much, I can't wait to learn and keep building bigger and better stuff. Until next time folks... 
+    <value>Both the “Loc” and “Results” boxes will auto-scroll if you add enough locations, so don’t worry about running 
+out of room. I hope you enjoy and find this app useful. It was super simple to make, and I love this game 
+so much that I can’t wait to learn and keep building bigger and better stuff. Until next time, folks…
 
-                                 Happy Hacking and HACK THE PLANET!
-
+                                Happy Hacking, and HACK THE PLANET!
 
 
 </value>
@@ -154,16 +152,20 @@ so much, I can't wait to learn and keep building bigger and better stuff. Until 
     <value>True</value>
   </metadata>
   <data name="txtStart1.Text" xml:space="preserve">
-    <value>
-* What this does is allow you, the user to paste all your locs at once as long as one per line to Loc box.
+    <value>                                            How To Use 
 
-* Add your script Prefix [ex:richter.t1cracker] to Prefix box.
+              * Copy all your locs (one per line) and paste them into the “Loc” box.
 
-* Click convert and watch the magic happen of adding all your locs to the rest of your script!!
+               * In the “Prefix” box, enter your script prefix (e.g., richter.t1cracker).
 
-* Result: richter.t1cracker {t:#s.uknown_jr_vhslsk.pub_a8rmp9}
+                * Click the “Convert” button and watch the magic happen!
+
+                 * Result: richter.t1cracker {t:#s.uknown_jr_vhslsk.pub_a8rmp9}
 
 
 </value>
   </data>
+  <metadata name="textBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

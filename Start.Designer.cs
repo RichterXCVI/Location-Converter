@@ -61,7 +61,7 @@
             txtPress.Cursor = Cursors.No;
             txtPress.Font = new Font("White Rabbit", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPress.ForeColor = Color.Red;
-            txtPress.Location = new Point(229, 246);
+            txtPress.Location = new Point(222, 253);
             txtPress.MaximumSize = new Size(280, 16);
             txtPress.MinimumSize = new Size(280, 16);
             txtPress.Name = "txtPress";
@@ -77,7 +77,7 @@
             txtStart3.Cursor = Cursors.No;
             txtStart3.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtStart3.ForeColor = Color.Lime;
-            txtStart3.Location = new Point(12, 170);
+            txtStart3.Location = new Point(12, 176);
             txtStart3.MaximumSize = new Size(747, 57);
             txtStart3.MinimumSize = new Size(747, 57);
             txtStart3.Multiline = true;
@@ -95,12 +95,12 @@
             txtStart1.Cursor = Cursors.No;
             txtStart1.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtStart1.ForeColor = Color.Cyan;
-            txtStart1.Location = new Point(8, 75);
+            txtStart1.Location = new Point(9, 72);
             txtStart1.Multiline = true;
             txtStart1.Name = "txtStart1";
             txtStart1.ReadOnly = true;
             txtStart1.RightToLeft = RightToLeft.No;
-            txtStart1.Size = new Size(747, 89);
+            txtStart1.Size = new Size(747, 100);
             txtStart1.TabIndex = 3;
             txtStart1.Text = resources.GetString("txtStart1.Text");
             // 
@@ -111,7 +111,7 @@
             textBox3.Cursor = Cursors.No;
             textBox3.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox3.ForeColor = Color.Yellow;
-            textBox3.Location = new Point(68, 32);
+            textBox3.Location = new Point(61, 31);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(78, 10);
