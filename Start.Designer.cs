@@ -111,7 +111,7 @@
             textBox3.Cursor = Cursors.No;
             textBox3.Font = new Font("White Rabbit", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox3.ForeColor = Color.Yellow;
-            textBox3.Location = new Point(61, 31);
+            textBox3.Location = new Point(62, 32);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(78, 10);
