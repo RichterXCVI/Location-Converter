@@ -44,7 +44,7 @@
             // 
             txtResults.BackColor = SystemColors.ActiveCaption;
             txtResults.Cursor = Cursors.IBeam;
-            txtResults.Font = new Font("White Rabbit", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtResults.Font = new Font("White Rabbit", 8.5F);
             txtResults.Location = new Point(9, 48);
             txtResults.Margin = new Padding(12);
             txtResults.Name = "txtResults";
@@ -56,7 +56,6 @@
             // btnConvert
             // 
             btnConvert.BackColor = SystemColors.ButtonHighlight;
-            btnConvert.Cursor = Cursors.Default;
             btnConvert.FlatStyle = FlatStyle.Popup;
             btnConvert.Font = new Font("White Rabbit", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConvert.ForeColor = SystemColors.ActiveCaptionText;
