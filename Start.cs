@@ -27,13 +27,24 @@ namespace HM_Loc_Converter
                 if (e.KeyCode == Keys.Enter)
                 {
                     soundPlayer.Play();
-                    Hide();
-                    var locationsForm = new Locations();
-                    locationsForm.FormClosed += (s, args) => Close();
-                    locationsForm.Show();
+                    FadeOutAndOpenLocations();
                 }
             };
             this.Activate();
+        }
+
+        private async void FadeOutAndOpenLocations()
+        {
+            double opacityStep = 0.1;
+            while (Opacity > 0)
+            {
+                Opacity -= opacityStep;
+                await System.Threading.Tasks.Task.Delay(50);
+            }
+            Hide();
+            var locationsForm = new Locations();
+            locationsForm.FormClosed += (s, args) => Close();
+            locationsForm.Show();
         }
 
         private void LoadCustomFont()

@@ -1,8 +1,12 @@
+using System;
+using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Media;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HM_Loc_Converter
 {
@@ -22,6 +26,28 @@ namespace HM_Loc_Converter
             txtScript.TextChanged += Txt_TextChanged;
             txtInput.Click += (s, e) => txtResults.BackColor = SystemColors.ActiveCaption;
             txtResults.Click += (s, e) => txtResults.BackColor = string.IsNullOrEmpty(txtScript.Text.Trim()) ? Color.Red : SystemColors.Window;
+
+            // Subscribe to the Shown event to trigger fade-in effect
+            this.Shown += Locations_Shown!;
+        }
+
+        // Method to handle the Shown event and trigger fade-in effect
+        private async void Locations_Shown(object sender, EventArgs e)
+        {
+            await FadeIn();
+        }
+
+        // Fade-in effect method
+        private async Task FadeIn()
+        {
+            double opacityStep = 0.05; // Decrease the step size for smoother fade-in
+            while (Opacity < 1)
+            {
+                Opacity += opacityStep;
+                if (Opacity > 1) // Ensure Opacity doesn't exceed 1
+                    Opacity = 1;
+                await Task.Delay(20); // Increase the delay for a slower fade-in
+            }
         }
 
         private void Txt_TextChanged(object? sender, EventArgs e) => btnConvert.Enabled = !string.IsNullOrEmpty(txtScript.Text.Trim());
